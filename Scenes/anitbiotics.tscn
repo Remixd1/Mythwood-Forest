@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=4 uid="uid://b28hyjui4nlau"]
+
+[ext_resource type="Script" uid="uid://62nv11ulu0fa" path="res://Scripts/anitbioticsScript.gd" id="1_1acmi"]
+[ext_resource type="Texture2D" uid="uid://bt4ijerhx1737" path="res://Survival/Textures/Antibiotics.png" id="1_jo8u1"]
+[ext_resource type="AudioStream" uid="uid://bxvmahc8ouq6s" path="res://Sound and music/EatingSFX.wav" id="3_dbrk4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1acmi"]
+size = Vector3(0.234512, 0.186768, 0.218842)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u8uy7"]
+resource_name = "Antibiotics"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_jo8u1")
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_meo5a"]
+_surfaces = [{
+"aabb": AABB(-0.00292495, -0.00337744, -0.00713837, 0.0058499, 0.00675489, 0.0135802),
+"format": 34359742465,
+"index_count": 204,
+"index_data": PackedByteArray("AAAYABkABQAZABgAGgAZAAUAGAABAAUAGgAFAAYABgAFAAEACwABABgAAQAIAAYAGgAGAAgACQAIAAEAAQALAAkACAAbABoAGwAIAAkABwAaABsAGgACABkAGgAHAAIAGQACAAAAAgAHAAQAGwAEAAcABAAAAAIACQAcABsABAAbABwAHQAcAAkAAwAAAAQAHAAKAAQABAAKAAMADwAKABwAHAAdAA8ADgADAAoACgAPAA4AAAADAB4AHgADAA4AHgAYAAAAGAAeAAsAEAAPAB0ADgAPABAADgAfAB4ACwAeAB8AHwAOABEAEAARAA4AHwANAAsAEQAgAB8ADQAfACAAIAARABQAFAARABAAFAAhACAAIAATAA0AEwAgACEACwANAAwADAAJAAsACQAMAB0AEgAMAA0ADQATABIAIgAdAAwADAASACIAHQAiABAAFwASABMAIQAVABMAEwAVABcAFQAhABQAEgAXACMAFQAjABcAIwAiABIAFQAUABYAFQAWACMAIgAjABYAEAAWABQAFgAQACIA"),
+"lods": [0.00166397, PackedByteArray("AAABAAIAAwABAAAABAAAAAIAAwAAAAQABQACAAEABgACAAUABgAFAAEABgAHAAIAAgAHAAQABwAGAAQACAAEAAYAAQAIAAYABAAIAAkACQAIAAEACQAKAAQABAAKAAMAAQALAAkAAQADAAsADAAKAAkADAAJAAsACwADAA0ACwANAAwADgADAAoADgANAAMACgAPAA4ACgAMAA8ADgAPABAAEAAPAAwADQAOABEAEAARAA4AEgAMAA0ADAASABAAEQATAA0ADQATABIAEwARABQAFAARABAAFAAVABMAEAAWABQAFQAUABYAFwAQABIAFwASABMAEAAXABYAEwAVABcAFQAWABcA")],
+"name": "Antibiotics",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("aAEdO1hLtTrFwnQ7agEdu1dLtTrFwnQ7aAEdO1hLtTr36Om7j7A/OxtY3TrFwnQ7aAEdO1tLtbrFwnQ7agEdu1dLtTr36Om7agEdu1dLtbr36Om7aAEdO1tLtbr36Om7agEdu1dLtbrFwnQ7j7A/uxpY3brFwnQ7j7A/Ox9Y3brFwnQ7j7A/uxpY3TrFwnQ7j7A/uxpY3bp9vKs7j7A/uxpY3Tp9vKs7j7A/OxtY3Tp9vKs7j7A/Ox9Y3bp9vKs7QIgJO/7Onrp9vKs7QIgJO//Onjp9vKs7Q4gJu/zOnrp9vKs7Q4gJu/7Onjp9vKs7QIgJO//OnjpqFtM7Q4gJu/7OnjpqFtM7QIgJO/7OnrpqFtM7Q4gJu/zOnrpqFtM7lPQPr1pLNTvFwnQ7lPQPr1pLNTv36Om7Tu7Mr1pLNbv36Om7Tu7Mr1pLNbvFwnQ7OE3qrxxYXbvFwnQ7DIgEsBxYXbt9vKs7lPQPrxxYXTvFwnQ7UXpNrxxYXTt9vKs7KNlKr/7OHjt9vKs7vaaCr/7OHjtqFtM7JOPZr/7OHrt9vKs7TR33r/7OHrtqFtM7")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dbrk4"]
+resource_name = "Antibiotics"
+_surfaces = [{
+"aabb": AABB(-0.00292495, -0.00337744, -0.00713837, 0.0058499, 0.00675489, 0.0135802),
+"attribute_data": PackedByteArray("pDJyPkULfj9EduY+RQt+P6Qycj679AE/QnbmPrr0AT/2Yl0/RQt+P/DQPT9FC34/8NA9P7v0AT/1Yl0/uvQBP4Bd+ju79AE/zIxiPrr0AT+AXfo7RQt+P9CMYj5FC34/L0nuPo7Faj965zk/j8VqP0bdMz/cSGc/euc5PyI6RD+ZXfo+20hnP0bdMz/Wtkc/mV36Pta2Rz8vSe4+IjpEP4Bd+juIFvw+ABsGPogW/D7+GgY+AF36O4Bd+jsAXfo74o6BPowW/D7kjoE+8Jx7PtbAFT6IhNw+XD24PnxgnT70glo+wJKjPdjAFT7AkqM92MAVPhD3az70glo+EPdrPip5MD92V/E+6JIAP3ZX8T4vSe4+qHPmPuiSAD9YUxQ/euc5P6hz5j4vSe4+QMUZPyp5MD9ZUxQ/euc5P0DFGT9JEMA+ihb8Pldx4j6QIW0+V3HiPooW/D5JEMA+kCFtPnYBTz+KFvw+dgFPP5AhbT7v0D0/ihb8Pu/QPT+QIW0+chtkPxx3lD7r6lI/HHeUPuvqUj+EwA4+chtkP4TADj5kubM+SLH6PVpQmD5Isfo9WlCYPhj3az5kubM+GPdrPjBJ7j6ybZw+uBcPP7TtEj7ZCic/7DxKPrkXDz9QFbg+6+pSP4oW/D5wn2A/CEqcPnCfYD+KFvw+6+pSPwhKnD7UqDg/ThW4PtSoOD+YkTA+T/QqP5iRMD5P9Co/ThW4Pm59kD4Y92s+yChqPhj3az7IKGo+QLH6PW59kD5Asfo9zMevPkULfj/Kx68+uvQBP8Bf6j1FC34/uF/qPbr0AT8Ihhg/Rgt+PwiGGD/eEXc/CIYYP9LtNz8Ihhg/bPQwP109uD6IhNw+1MAVPnhgnT4Ihhg/2K/VPgiGGD866L8+CIYYPygnIj8Ihhg/9wotP0kQwD6oU7k+V3HiPqhTuT52AU8/qFO5Pu/QPT+oU7k+L0nuPvA8Sj7ZCic/tG2cPuvqUj9KMMw+cJ9gP0gwzD7UqDg/Di+IPk/0Kj8OL4g+"),
+"format": 34359742487,
+"index_count": 204,
+"index_data": PackedByteArray("AABIAEkASQACAAAAAwBJAEgASAABAAMABAAFAAYABgAHAAQASgAKAAgACABLAEoACwBKAEsASwAJAAsADABMAE0ATQAQAAwADgBNAEwADAAQABIATAANAA4AEgATAAwADgANAA8AEwASAE4ADwARAA4ATgBPABMAEQAPAE8ATwBOABEAFAAVABYAFgAXABQAUABRABoAUAAaABgAUAAZAFEAUAAbABkAHAAdAB4AHgAfABwAUgAhACIAIgAhACMAIgBTAFIAIwAlACIAIABSAFMAJQAjAFQAUwAkACAAVABVACUAJgAgACQAVQBUACYAJAAnACYAJgAnAFUAKgAoAFYAVgBXACoAVwBWACsAKwApAFcALABYAFkAWQAuACwALwBZAFgAWAAtAC8AMAAxADIAMgAzADAANAA1ADYANgA3ADQAOAA5ADoAOABaADkAOAA6AFsAOABbADsAPgA8AFwAXABdAD4AXQBcAD8APwA9AF0AQABeAF8AXwBDAEAAQgBfAF4AXgBBAEIARABFAEYARgBHAEQA"),
+"lods": [0.00166397, PackedByteArray("AAABAAIAAwACAAEABAAFAAYABgAHAAQACAAJAAoACwAKAAkADAANAA4ADgANAA8ADgAQAAwADwARAA4ADAAQABIADwASABEAEgATAAwAEgAPABMAFAAVABYAFgAXABQAGAAZABoAGAAbABkAHAAdAB4AHgAfABwAIAAhACIAIgAhACMAIgAkACAAIwAlACIAJgAgACQAJQAjACYAJAAnACYAJgAnACUAKAApACoAKQAoACsALAAtAC4ALwAuAC0AMAAxADIAMgAzADAANAA1ADYANgA3ADQAOAA5ADoAOAA6ADsAPAA9AD4APQA8AD8AQABBAEIAQgBDAEAARABFAEYARgBHAEQA")],
+"material": SubResource("StandardMaterial3D_u8uy7"),
+"name": "Antibiotics",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 96,
+"vertex_data": PackedByteArray("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")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_meo5a")
+
+[node name="Anitbiotics" type="StaticBody3D"]
+script = ExtResource("1_1acmi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0109329, 0.138794, 0.0951996)
+shape = SubResource("BoxShape3D_1acmi")
+
+[node name="Antibiotics" type="MeshInstance3D" parent="."]
+transform = Transform3D(12.9978, 0, 0, 0, -1.54945e-06, 12.9978, 0, -12.9978, -1.54945e-06, 0.0549564, 0.12878, 0.0401102)
+mesh = SubResource("ArrayMesh_dbrk4")
+skeleton = NodePath("")
+
+[node name="Antibiotics2" type="MeshInstance3D" parent="."]
+transform = Transform3D(12.9978, 0, 0, 0, -1.54945e-06, 12.9978, 0, -12.9978, -1.54945e-06, -0.084607, 0.12878, 0.108075)
+mesh = SubResource("ArrayMesh_dbrk4")
+skeleton = NodePath("")
+
+[node name="Antibiotics3" type="MeshInstance3D" parent="."]
+transform = Transform3D(12.9978, 0, 0, 0, -1.54945e-06, 12.9978, 0, -12.9978, -1.54945e-06, 0.0305932, 0.12878, 0.169851)
+mesh = SubResource("ArrayMesh_dbrk4")
+skeleton = NodePath("")
+
+[node name="CollectSound" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, 0.0305932, 0.12878, 0.169851)
+stream = ExtResource("3_dbrk4")

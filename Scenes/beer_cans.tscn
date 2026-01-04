@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=4 uid="uid://bol8dxnvtfmgu"]
+
+[ext_resource type="Script" uid="uid://c23so7wxvsps1" path="res://Scripts/beer_cansScript.gd" id="1_ar215"]
+[ext_resource type="Texture2D" uid="uid://ifytjcwjr2wb" path="res://Survival/Textures/Can_Soda.png" id="1_c2au7"]
+[ext_resource type="AudioStream" uid="uid://bxvmahc8ouq6s" path="res://Sound and music/EatingSFX.wav" id="3_t8u8p"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_frf6i"]
+resource_name = "Material.001"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_c2au7")
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vofjf"]
+_surfaces = [{
+"aabb": AABB(-0.00866025, -0.01, -0.0123102, 0.0173205, 0.02, 0.0318981),
+"format": 34359742465,
+"index_count": 168,
+"index_data": PackedByteArray("DgAPAAIADwAOAAgAAgAKAA4ABAACAA8AEAAOAAoACAAOABAACgACABEADAARAAIAAgAEAAwAEgARAAwAEgAMAAQAEQALAAoAEgALABEAAwAKAAsACgADABAAEgATAAsACwATAAMAEgAUABMABAAVABIAFAASABUAEwAUAAcABwADABMAFQAHABQAFgAQAAMAAwAHABYABwAVAA0ADQAWAAcAFQAEABcAFwANABUADwAXAAQAGAAQABYAFwAPABkAEAAYAAgACAAZAA8AGQAaABcADQAXABoABgAaABkAGwAWAA0AFgAbABgAGgAcAA0ADQAcABsAGgAGAB0AHQAcABoAGQABAAYAAQAdAAYAAQAZAAgAHAAdAAUAAQAFAB0ABQAbABwACAAJAAEACQAIABgAAQAAAAUAAQAJAAAAGwAFAAAAGAAAAAkAAAAYABsA"),
+"lods": [0.00591275, PackedByteArray("CAABAAIACAAJAAEACQAIAAAAAQAJAAAAAAAIAAoAAgAKAAgAAQAAAAUACgADAAAABQAAAAMAAwAKAAsACgACAAsAAwAHAAUACwAHAAMADAALAAIADAAHAAsAAgAEAAwABAAHAAwABAACAAEADQAFAAcABwAEAAYABgANAAcAAQAGAAQADQAGAAUAAQAFAAYA"), 0.00862944, PackedByteArray("AAABAAIAAgADAAAABAACAAEABQAAAAMAAQAAAAUAAQAGAAQAAQAFAAYABAAHAAIAAgAHAAMABwAEAAYAAwAHAAUABwAGAAUA")],
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 30,
+"vertex_data": PackedByteArray("bwXlO7Q5hDvWdqA8bwXlu7I5hDvWdqA8veMNvAjXoztktx+8veMNPArXoztktx+8veMNvAjXo7tktx+8bgXlO705hLvWdqA8bwXlu7o5hLvWdqA8veMNPAzXo7tktx+8c1diL7Y5BDyaO5o8c1diL7Y5BDzWdqA8AAAAAArXIzxktx+8CtcjMC6/5juPsEm8JdXHuym/ZruPsEm8T05wsArXI7wbG2Y8AAAAAArXIzwbG2Y8veMNvAjXozsbG2Y8veMNPArXozsbG2Y8JdXHuyq/ZjuPsEm8zcxMsC2/5ruPsEm8JdXHOyy/ZjuPsEm8JNXHOy+/ZruPsEm8T05wsArXI7xktx+8veMNPAzXo7sbG2Y8veMNvAjXo7sbG2Y8bwXlO7Q5hDuaO5o8bwXlu7I5hDuaO5o8bwXlu7o5hLuaO5o8bgXlO705hLuaO5o841kJsLo5BLyaO5o841kJsLo5BLzWdqA8")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ar215"]
+resource_name = "Can_Soda"
+_surfaces = [{
+"aabb": AABB(-0.00866025, -0.01, -0.0123102, 0.0173205, 0.02, 0.0318981),
+"attribute_data": PackedByteArray("Ug8YP5LM9T7SiLI+ksz1PmCFoz6Orn4/CpEfP4+ufj+YP54+j65+P8C4qDuOrn4/qDINPZLM9T4oPI8+ksz1PjEYVj+Orn4/DFl6P46ufj+Mrn4/kMz1Pq/CUT+SzPU+TMpKP46ufj9xiSY/jq5+P+8zIj+SzPU+zB9PP5DM9T5MUOI+yobwPmKFoz48xIM+SlDiPsAGPz6ajRA/8EXMPsC4qDtkhlM+mD+ePuyawz6YP54+ZIZTPsC4qDvsmsM+u1PxPhSi/D67U/E+ksz1PrtT8T6Orn4/fOIgPhTNEz9ihaM+8EXMPnziID4Q1i4+fOIgPlBd8z2IOE09FFG2PrtT8T4UzRM/YIWjPhTNEz8MkR8/Fc0TP9KIsj4Uovw+Ug8YPxai/D6aP54+Fc0TPyg8jz4Wovw+euIgPo6ufj/guKg7FM0TP6gyDT0Uovw+fOIgPhSi/D584iA+ksz1Pq/CUT/Dx2U/jK5+P8PHZT8xGFY/zUN7PwxZej/NQ3s/zR9PP8PHZT/vMyI/w8dlP3GJJj/NQ3s/TMpKP81Dez+ajRA/OsSDPmo7hz4YGm4+ajuHPhRRtj564iA+zIbwPnriID4Y89U+iDhNPRgabj4="),
+"format": 34359742487,
+"index_count": 168,
+"index_data": PackedByteArray("IAAhAAIAAgAaACAAIgAgABoAGgADACIAIQAgABgAGAAgACIAGAAjACEAAQAjABgAIgAkABgAGAAZAAEAGQAYACQAJAAAABkAGwAlAAQAJgAlABsABAAnABsAKAAbACcAJwAFACgAGwAoACkAGwAqACYAKQAqABsABwAmACoAKgArAAcAKwAqACkAKQAGACsALAAtAAoACgALACwALQAsAC4ALgAvAC0ACQAvAC4ALgAIAAkAMAAxAA4ADgAPADAAMgAxADAAMAAzADIADQAyADMAMwAMAA0AEAARABIAEAAcABEAEAASADQAEAA0ABMAHQA1ABYAFQAWADUAFgAeAB0ANQA2ABUANwAVADYAOAA2ADUANgA4ADcAOAA1AB0AFwA3ADgAOQAdAB4AOAAdADkAHgAUADkAOAAfABcAFAAXAB8AOAA5AB8AHwA5ABQA"),
+"lods": [0.00591275, PackedByteArray("GAABAAIAGAAZAAEAAgAaABgAGQAYAAAAAAAYABoAGgADAAAAGwAHAAQAGwAGAAcABgAbAAQABAAFAAYACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEAAcABEAEAASABMAHQAVABYAFgAeAB0AHgAUAB0AHwAVAB0AHwAdABQAFwAVAB8AFAAXAB8A"), 0.00862944, PackedByteArray("AAABAAIAAgADAAAABAAFAAYABAAGAAcACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEAASABMAFAAVABYAFwAVABQA")],
+"material": SubResource("StandardMaterial3D_frf6i"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 58,
+"vertex_data": PackedByteArray("bwXlO7Q5hDvWdqA8bwXlu7I5hDvWdqA8veMNvAjXoztktx+8veMNPArXoztktx+8veMNPAzXo7tktx+8veMNvAjXo7tktx+8bwXlu7o5hLvWdqA8bgXlO705hLvWdqA8bwXlu7I5hDvWdqA8bwXlu7o5hLvWdqA8veMNvAjXo7tktx+8veMNvAjXoztktx+8bgXlO705hLvWdqA8bwXlO7Q5hDvWdqA8veMNPArXoztktx+8veMNPAzXo7tktx+8bwXlu7I5hDvWdqA8bwXlO7Q5hDvWdqA8bgXlO705hLvWdqA8bwXlu7o5hLvWdqA8veMNvAjXoztktx+8veMNPAzXo7tktx+8veMNPArXoztktx+8veMNvAjXo7tktx+8c1diL7Y5BDyaO5o8c1diL7Y5BDzWdqA8AAAAAArXIzxktx+8T05wsArXI7wbG2Y8c1diL7Y5BDzWdqA8CtcjMC6/5juPsEm8AAAAAArXIzxktx+8JdXHuym/ZruPsEm8AAAAAArXIzwbG2Y8veMNvAjXozsbG2Y8veMNPArXozsbG2Y8bwXlu7I5hDuaO5o8bwXlO7Q5hDuaO5o8veMNPAzXo7sbG2Y8bgXlO705hLuaO5o8T05wsArXI7xktx+8veMNvAjXo7sbG2Y8bwXlu7o5hLuaO5o841kJsLo5BLyaO5o841kJsLo5BLzWdqA8veMNvAjXozsbG2Y8veMNvAjXo7sbG2Y8bwXlu7I5hDuaO5o8bwXlu7o5hLuaO5o8veMNPAzXo7sbG2Y8veMNPArXozsbG2Y8bwXlO7Q5hDuaO5o8bgXlO705hLuaO5o841kJsLo5BLzWdqA8JdXHOyy/ZjuPsEm8JNXHOy+/ZruPsEm8T05wsArXI7xktx+8zcxMsC2/5ruPsEm8JdXHuyq/ZjuPsEm85bP2narHhmYZTPad8bLVIzYkRsG0vdgWyNtGwbCtJGHI27g+sK0k4TYkuD60vdiWGUwIYvGy1KPlswhiqseG5hlM9p1YZsVnGUwIYnSwK3M2JLg+4aO+ZTYkRsF9Sw5u5bMIYopP04zls/adppk5mMjbRsGBtPCRyNu4Ph5cQJoZTPadJVFsl+Wz9p1tfH+b5bMIYiVRbJcZTAhi/0jIgTYkRsFT7f0UyNu4PvupqTbI20bB+6lVSTYkuD5T7QFr/38D6v7//z//f1LI/v//P1db///+//8//3/PE/7//7//f1LIa0xgr7nV///+//8/V1v//////z/bEqkg8//TLP9/L+z+//8/cThPqcqs1RqNx0+pqrWaaYs5rKi8rEwbc8asqJm2oWmNx69WqrWZ6XPGUleZtqDpV1sAAP7//79xOK9WyqzUmos5Ule8rEyb/3/7Ff7//7//f6w3////v3E4T6mgVVVmcTivVlOz0GqLOayoUFYqZos5UlepsyhrjcevVqtMLpWNx0+pXqqpmXPGrKiuqdSZc8ZSV1VM1pT/f6w3PSHJmSPtVd+n2fo/I+2pIKfZBUBXWwAA////P7nVAAD+//8/2xJV3/P/K1M=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_vofjf")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t8u8p"]
+size = Vector3(0.357971, 0.233948, 0.394531)
+
+[node name="BeerCans" type="StaticBody3D"]
+script = ExtResource("1_ar215")
+
+[node name="Can_Soda" type="MeshInstance3D" parent="."]
+transform = Transform3D(7.81881, 0, 0, 0, -9.32074e-07, 7.81881, 0, -7.81881, -9.32074e-07, 0.0844447, 0.104815, -0.0791938)
+mesh = SubResource("ArrayMesh_ar215")
+skeleton = NodePath("")
+
+[node name="Can_Soda2" type="MeshInstance3D" parent="."]
+transform = Transform3D(7.81881, 0, 0, 0, -9.32074e-07, 7.81881, 0, -7.81881, -9.32074e-07, -0.103513, 0.104815, -0.0791938)
+mesh = SubResource("ArrayMesh_ar215")
+skeleton = NodePath("")
+
+[node name="Can_Soda3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-3.30125e-07, -2.02366, 7.55239, -7.81881, 4.07423e-14, -3.41771e-07, 8.84568e-08, -7.55239, -2.02366, -0.0595901, 0.0762811, 0.123721)
+mesh = SubResource("ArrayMesh_ar215")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00112915, 0.147125, 0.0288086)
+shape = SubResource("BoxShape3D_t8u8p")
+
+[node name="CollectSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_t8u8p")

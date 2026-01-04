@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=4 uid="uid://cpopnjav8b5rm"]
+
+[ext_resource type="AudioStream" uid="uid://bxvmahc8ouq6s" path="res://Sound and music/EatingSFX.wav" id="1_p0e35"]
+[ext_resource type="Texture2D" uid="uid://o476rumcp0r7" path="res://Trailer_Park/Textures/Door.jpg" id="1_w6aom"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p0e35"]
+size = Vector3(0.0949707, 2.49902, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_56e4y"]
+resource_name = "Door"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_w6aom")
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1hm5w"]
+_surfaces = [{
+"aabb": AABB(-0.000272857, -0.0087365, -0.0114203, 0.000545714, 0.00874046, 0.0228406),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAAAQAAAAQABAAAAAMABQACAAEAAwACAAUABAAGAAEAAQAGAAUAAwAHAAQABgAEAAcABQAHAAMABwAFAAYA"),
+"name": "Door",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("QQ6PuYcjD7wfHDs8QQ6PuZoZhTYfHDs8QQ6PuZoZhTYfHDu8QQ6PuYcjD7wfHDu8QA6POYcjD7wfHDs8QA6POZoZhTYfHDu8QA6POZoZhTYfHDs8QA6POYcjD7wfHDu8")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_fahql"]
+resource_name = "Door_006"
+_surfaces = [{
+"aabb": AABB(-0.000272857, -0.0087365, -0.0114203, 0.000545714, 0.00874046, 0.0228406),
+"attribute_data": PackedByteArray("eW97P2CgkDzgEJI8YKCQPOAQkjz+ens/eW97P/56ez/8YuQ9YKCQPIC3SDxgoJA8gLdIPP56ez/8YuQ9/np7P+AQkjxgoJA8eW97P2CgkDx5b3s//np7P+AQkjz+ens/gLdIPGCgkDz8YuQ9YKCQPPxi5D3+ens/gLdIPP56ez/8YuQ9rEAvP/xi5D2mfqE+gLdIPKZ+oT6At0g8rEAvP4C3SDysQC8/gLdIPKZ+oT78YuQ9pn6hPvxi5D2sQC8/"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQA"),
+"material": SubResource("StandardMaterial3D_56e4y"),
+"name": "Door",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("QQ6PuYcjD7wfHDs8QQ6PuZoZhTYfHDs8QQ6PuZoZhTYfHDu8QQ6PuYcjD7wfHDu8QA6POYcjD7wfHDs8QQ6PuYcjD7wfHDs8QQ6PuYcjD7wfHDu8QA6POYcjD7wfHDu8QA6POZoZhTYfHDs8QA6POYcjD7wfHDs8QA6POYcjD7wfHDu8QA6POZoZhTYfHDu8QQ6PuZoZhTYfHDs8QA6POZoZhTYfHDs8QA6POZoZhTYfHDu8QQ6PuZoZhTYfHDu8QA6POZoZhTYfHDu8QA6POYcjD7wfHDu8QQ6PuYcjD7wfHDu8QQ6PuZoZhTYfHDu8QQ6PuZoZhTYfHDs8QQ6PuYcjD7wfHDs8QA6POYcjD7wfHDs8QA6POZoZhTYfHDs8////f/9//n////9//3/+f////3//f/5/////f/9//n//f///////P/9///////8//3///////z//f///////PwAA/3//fwCAAAD/f/9/AIAAAP9//38AgAAA/3//fwCA/38AAP///7//fwAA////v/9/AAD///+//38AAP///7//f/9/////P/9//3////8//3//f////z//f/9/////P/////////+//////////7//////////v/////////+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_1hm5w")
+
+[node name="Door" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0645752, 0.29541, 0)
+shape = SubResource("BoxShape3D_p0e35")
+
+[node name="OpenSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("1_p0e35")
+
+[node name="Door_006" type="MeshInstance3D" parent="."]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, -0.041864, 0.390622, -0.418051)
+mesh = SubResource("ArrayMesh_fahql")
+skeleton = NodePath("")

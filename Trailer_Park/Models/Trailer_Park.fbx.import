@@ -1,0 +1,225 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cys7t2mw163tm"
+path="res://.godot/imported/Trailer_Park.fbx-add6b65f0fdb5fbb8152b5547e325ae4.scn"
+
+[deps]
+
+source_file="res://Trailer_Park/Models/Trailer_Park.fbx"
+dest_files=["res://.godot/imported/Trailer_Park.fbx-add6b65f0fdb5fbb8152b5547e325ae4.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=true
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"nodes": {
+"PATH:Bed_01_001": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:Bed_02_001": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:Book_007": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:Books_001": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:Chair_001": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:Chair_002": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:Couch_001": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:Couch_002": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Home": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Home_01": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Lamp_001": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:Lamp_01_001": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:Lamp_01_002": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:Plants_002": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:Plants_01_002": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:Refrigerator_001": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:Refrigerator_C_001": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:Refrigerator_P_001": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:Refrigerator_P_01_001": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:Shelf_001": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:Shelf_P_001": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:Shelf_P_01_001": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:Stove_001": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:Stove_002": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:TV_001": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:TV_002": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:Table_001": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:Table_01_001": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Table_02_001": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Table_02_002": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:Table_02_003": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Terrain": {
+"generate/physics": true,
+"physics/physics_material_override": null,
+"physics/shape_type": 2
+},
+"PATH:Toilet_001": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:Toilet_002": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:Vase_001": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:Wall": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:Wall_01": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:Wall_02": {
+"physics/shape_type": 1
+},
+"PATH:air-conditioning": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:kitchen_001": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:kitchen_002": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:railing": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:railing_01": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:trash_can_001": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:washbasin_01_001": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:washbasin_01_004": {
+"generate/physics": true,
+"physics/shape_type": 1
+}
+}
+}
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1

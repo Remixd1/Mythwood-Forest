@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://ccm4a4r632ber"]
+
+[ext_resource type="Script" uid="uid://dy35ti7w1s6n5" path="res://Scripts/cameraScript.gd" id="1_mhsga"]
+[ext_resource type="AudioStream" uid="uid://bxvmahc8ouq6s" path="res://Sound and music/EatingSFX.wav" id="2_xfji6"]
+[ext_resource type="PackedScene" uid="uid://bu5nkd7gq8prg" path="res://Exploration objects/Photo_Camera/Flashlight_Poquet.fbx" id="3_x3vey"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pqp4w"]
+size = Vector3(0.141846, 0.0773621, 0.0946045)
+
+[node name="Camera" type="StaticBody3D"]
+script = ExtResource("1_mhsga")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0235596, 0.00764465, -0.00482178)
+shape = SubResource("BoxShape3D_pqp4w")
+
+[node name="CollectSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_xfji6")
+
+[node name="Flashlight_Poquet" parent="." instance=ExtResource("3_x3vey")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0173136, 7.45058e-09, -0.0114476)

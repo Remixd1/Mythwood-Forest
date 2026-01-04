@@ -1,0 +1,195 @@
+[gd_scene load_steps=10 format=3 uid="uid://dmnl34cdgk6kc"]
+
+[ext_resource type="PackedScene" uid="uid://cys7t2mw163tm" path="res://Trailer_Park/Models/Trailer_Park.fbx" id="1_uee5o"]
+[ext_resource type="Script" uid="uid://dh6vjeri0qoim" path="res://Scripts/PlayerMAIN.gd" id="2_vh310"]
+[ext_resource type="PackedScene" uid="uid://b000nvl8o33ul" path="res://Trailer_Park/Characters/Character_Male.fbx" id="3_igsr3"]
+[ext_resource type="AudioStream" uid="uid://dn2qhiui1qyjr" path="res://Sound and music/concrete-footsteps-1-6265 (1).wav" id="4_xgdwn"]
+[ext_resource type="Script" uid="uid://ce04sliawrgsb" path="res://Scripts/UIScript.gd" id="5_y1epu"]
+[ext_resource type="Script" uid="uid://beryuva2kqcty" path="res://Scripts/pack_list.gd" id="6_0jrfa"]
+[ext_resource type="FontFile" uid="uid://d48av060jc48" path="res://HomeVideo-BLG6G.ttf" id="7_l3vkk"]
+[ext_resource type="Script" uid="uid://cjqo3edx2efqu" path="res://Scripts/dialogScript.gd" id="8_7rj3f"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_avbhp"]
+radius = 0.215403
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Trailer_Park" parent="." instance=ExtResource("1_uee5o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.3949, 1.19209e-07, -26.958)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.3837, 0, 0)
+collision_layer = 3
+script = ExtResource("2_vh310")
+
+[node name="Player" parent="CharacterBody3D" instance=ExtResource("3_igsr3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.97002, 0.124904, -2.48915)
+visible = false
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Player"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.0527897, 1.83494, 0.114855)
+
+[node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D/Player/Camera3D"]
+transform = Transform3D(-1, -1.46807e-14, 8.74228e-08, 0, -1.92087, -8.74228e-08, 8.74228e-08, -1.67928e-07, 1, 0, 0, 0)
+target_position = Vector3(0, 0, -1.5)
+collision_mask = 2
+
+[node name="SpotLight3D" type="SpotLight3D" parent="CharacterBody3D/Player"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0207481, 1.52571, -1.40228)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.97955, 1.07681, -2.48098)
+shape = SubResource("CapsuleShape3D_avbhp")
+
+[node name="FootstepsPlayer" type="AudioStreamPlayer3D" parent="CharacterBody3D"]
+stream = ExtResource("4_xgdwn")
+volume_db = -6.096
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CharacterBody3D"]
+layer = 0
+script = ExtResource("5_y1epu")
+
+[node name="packList" type="VBoxContainer" parent="CharacterBody3D/CanvasLayer"]
+visible = false
+offset_left = 7.0
+offset_top = 8.0
+offset_right = 126.0
+offset_bottom = 191.0
+script = ExtResource("6_0jrfa")
+
+[node name="Label" type="Label" parent="CharacterBody3D/CanvasLayer/packList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_l3vkk")
+text = "FInd:"
+
+[node name="Label2" type="Label" parent="CharacterBody3D/CanvasLayer/packList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_l3vkk")
+theme_override_font_sizes/font_size = 11
+text = "Hunting Rifle"
+
+[node name="Label3" type="Label" parent="CharacterBody3D/CanvasLayer/packList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_l3vkk")
+theme_override_font_sizes/font_size = 11
+text = "Camera"
+
+[node name="Label4" type="Label" parent="CharacterBody3D/CanvasLayer/packList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_l3vkk")
+theme_override_font_sizes/font_size = 11
+text = "Painkillers"
+
+[node name="Label5" type="Label" parent="CharacterBody3D/CanvasLayer/packList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_l3vkk")
+theme_override_font_sizes/font_size = 11
+text = "Flashlight"
+
+[node name="Label6" type="Label" parent="CharacterBody3D/CanvasLayer/packList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_l3vkk")
+theme_override_font_sizes/font_size = 11
+text = "Beers"
+
+[node name="Control" type="Control" parent="CharacterBody3D/CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 576.0
+offset_bottom = 323.0
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="CharacterBody3D/CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -1.0
+offset_right = 1.5
+offset_bottom = 1.0
+mouse_filter = 2
+
+[node name="InteractLabel" type="Label" parent="CharacterBody3D/CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.566
+anchor_right = 0.5
+anchor_bottom = 0.566
+offset_left = -74.0
+offset_top = -11.384
+offset_right = 74.0
+offset_bottom = 11.616
+theme_override_fonts/font = ExtResource("7_l3vkk")
+theme_override_font_sizes/font_size = 11
+horizontal_alignment = 1
+
+[node name="ThoughtsUI" type="Label" parent="CharacterBody3D/CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.504
+anchor_top = 1.0
+anchor_right = 0.504
+anchor_bottom = 1.0
+offset_left = -195.264
+offset_top = -32.0
+offset_right = 195.696
+offset_bottom = -9.0
+theme_override_fonts/font = ExtResource("7_l3vkk")
+theme_override_font_sizes/font_size = 11
+horizontal_alignment = 1
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="CharacterBody3D"]
+
+[node name="DialogBox" type="Control" parent="CharacterBody3D/CanvasLayer2"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("8_7rj3f")
+
+[node name="VoicePlayer" type="AudioStreamPlayer" parent="CharacterBody3D/CanvasLayer2/DialogBox"]
+
+[node name="Panel" type="Panel" parent="CharacterBody3D/CanvasLayer2/DialogBox"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 7.187
+anchor_top = 8.103
+anchor_right = 7.187
+anchor_bottom = 8.103
+offset_left = -176.48
+offset_top = -136.12
+offset_right = 178.52
+offset_bottom = -20.12
+
+[node name="NameLabel" type="Label" parent="CharacterBody3D/CanvasLayer2/DialogBox"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 4.287
+anchor_top = 4.512
+anchor_right = 4.287
+anchor_bottom = 4.512
+offset_left = -59.48
+offset_top = -11.48
+offset_right = 59.52
+offset_bottom = 11.52
+theme_override_fonts/font = ExtResource("7_l3vkk")
+theme_override_font_sizes/font_size = 13
+
+[node name="TextLabel" type="RichTextLabel" parent="CharacterBody3D/CanvasLayer2/DialogBox"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 7.187
+anchor_top = 8.088
+anchor_right = 7.187
+anchor_bottom = 8.088
+offset_left = -170.48
+offset_top = -131.52
+offset_right = 170.52
+offset_bottom = -26.52
+theme_override_fonts/normal_font = ExtResource("7_l3vkk")
+theme_override_font_sizes/normal_font_size = 11

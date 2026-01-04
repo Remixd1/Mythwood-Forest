@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxnlpkog8vtjb"]
+
+[ext_resource type="PackedScene" uid="uid://b6ebep02ng4dx" path="res://Trailer_Park/Models/Trailer_Park_Props.fbx" id="1_g7527"]
+
+[node name="Trailer_Park_Props" instance=ExtResource("1_g7527")]
+
+[node name="Cereal_01" parent="." index="28"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, -9.47976, 1.58502, -8.30132)
+
+[node name="Trees_05" parent="." index="123"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 9.71889, -0.793738, 3.06879)
