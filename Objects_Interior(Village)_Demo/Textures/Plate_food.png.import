@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dri87626yatpp"
-path.s3tc="res://.godot/imported/Plate_food.png-7fb1069b03ff7bc3e06314d80501f48c.s3tc.ctex"
+path.s3tc="res://.godot/imported/Plate_food.png-6b78fffa196759f600c80951211101ca.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,14 +11,16 @@ metadata={
 
 [deps]
 
-source_file="res://Objects_Interior(Village)_Demo/textures/Plate_food.png"
-dest_files=["res://.godot/imported/Plate_food.png-7fb1069b03ff7bc3e06314d80501f48c.s3tc.ctex"]
+source_file="res://Objects_Interior(Village)_Demo/Textures/Plate_food.png"
+dest_files=["res://.godot/imported/Plate_food.png-6b78fffa196759f600c80951211101ca.s3tc.ctex"]
 
 [params]
 
 compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
@@ -26,6 +28,10 @@ mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
