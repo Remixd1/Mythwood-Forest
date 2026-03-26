@@ -1,10 +1,9 @@
-[gd_scene load_steps=21 format=4 uid="uid://baoknis5oni46"]
+[gd_scene load_steps=20 format=4 uid="uid://baoknis5oni46"]
 
 [ext_resource type="Texture2D" uid="uid://vjqepd68jiod" path="res://Survival/Textures/Shelter_tent.png" id="1_eojes"]
 [ext_resource type="Texture2D" uid="uid://cw0pii02gvska" path="res://Survival/Textures/bonfire.png" id="2_wqo6m"]
 [ext_resource type="Texture2D" uid="uid://bspnhc52683or" path="res://Survival/Textures/Backpack.png" id="3_8kmpt"]
 [ext_resource type="Texture2D" uid="uid://dqkout0bjdbt3" path="res://Survival/Textures/sleeping_bag.png" id="4_gsqoj"]
-[ext_resource type="PackedScene" uid="uid://d0cg2axnrybbg" path="res://Scenes/tape1.tscn" id="5_8yalp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r38xq"]
 resource_name = "Shelter_tent"
@@ -214,6 +213,3 @@ shape = SubResource("BoxShape3D_0v6j0")
 transform = Transform3D(0, -18.546217, -5.5272034e-07, -5.5272034e-07, 0, 18.546217, -18.546217, 5.5272034e-07, 0, -1.8527904, 0.12001696, -2.1918647)
 mesh = SubResource("ArrayMesh_n3q6n")
 skeleton = NodePath("")
-
-[node name="Cassette" parent="." instance=ExtResource("5_8yalp")]
-transform = Transform3D(-1.22857395e-08, -0.28106496, 0.28460938, 0.4, -1.7484556e-08, 8.4703296e-23, 1.2440672e-08, 0.28460938, 0.28106496, -0.10463494, -0.08485341, 0.81285083)

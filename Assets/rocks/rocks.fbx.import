@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://uyxstiuherfd"
-path="res://.godot/imported/Cassette.fbx-2f08e9d2bda9dd5c5563c27837cbffc4.scn"
+uid="uid://p1fdh6a5pbsq"
+path="res://.godot/imported/rocks.fbx-c9ebe5242f98b2a0666f2569f0e0278f.scn"
 
 [deps]
 
-source_file="res://Assets/Assets/Cassette.fbx"
-dest_files=["res://.godot/imported/Cassette.fbx-2f08e9d2bda9dd5c5563c27837cbffc4.scn"]
+source_file="res://Assets/rocks/rocks.fbx"
+dest_files=["res://.godot/imported/rocks.fbx-c9ebe5242f98b2a0666f2569f0e0278f.scn"]
 
 [params]
 

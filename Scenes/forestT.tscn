@@ -1,4 +1,4 @@
-[gd_scene load_steps=460 format=4 uid="uid://dwho1bb0g36ar"]
+[gd_scene load_steps=462 format=4 uid="uid://dwho1bb0g36ar"]
 
 [ext_resource type="Texture2D" uid="uid://b6x463kburq47" path="res://Trailer_Park/Textures/Grass.jpg" id="1_2cxp3"]
 [ext_resource type="Script" uid="uid://dh6vjeri0qoim" path="res://Scripts/PlayerMAIN.gd" id="2_gp4vb"]
@@ -27,6 +27,8 @@
 [ext_resource type="PackedScene" uid="uid://utrhybdggubg" path="res://Scenes/grass_patch.tscn" id="25_l731g"]
 [ext_resource type="PackedScene" uid="uid://baoknis5oni46" path="res://Scenes/dead_hunter.tscn" id="26_l731g"]
 [ext_resource type="PackedScene" uid="uid://cy3xdf88rsiii" path="res://Scenes/wendigo.tscn" id="27_y55cv"]
+[ext_resource type="PackedScene" uid="uid://6rhug4s2v6jv" path="res://Scenes/Cabin.tscn" id="28_2popk"]
+[ext_resource type="PackedScene" uid="uid://b5jhfudv33tyj" path="res://Scenes/rocks.tscn" id="28_vqyuf"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_djni0"]
 
@@ -11350,7 +11352,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -70.
 collision_layer = 3
 script = ExtResource("2_gp4vb")
 
-[node name="Player" parent="CharacterBody3D" instance=ExtResource("3_lxpw2")]
+[node name="Player" parent="CharacterBody3D" groups=["player"] instance=ExtResource("3_lxpw2")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.97002, 0.124904, -2.48915)
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="CharacterBody3D/Player"]
@@ -13453,7 +13455,7 @@ transform = Transform3D(0.35956216, 3.3691716, -0.014754836, -3.4827986, 0.34732
 transform = Transform3D(-1.7294259, 2.9447608, -0.030545337, -3.0443811, -1.6734208, -0.017420847, -0.05537787, 0.031803537, 1.9116358, 0.30066186, -2.4476986, 0.00222392)
 
 [node name="Trees_154" parent="ForestTrees" instance=ExtResource("19_siu80")]
-transform = Transform3D(-0.60183656, 3.336524, -0.02288435, -3.4492016, -0.58269393, -0.026698764, -0.05537798, 0.0318039, 1.9116333, 0.74025637, -2.7046943, 0.0022238363)
+transform = Transform3D(-0.60183656, 3.336524, -0.02288435, -3.4492016, -0.58269393, -0.026698764, -0.055377994, 0.0318039, 1.9116337, 0.77931416, -2.9791546, 0.0022237375)
 
 [node name="Trees_155" parent="ForestTrees" instance=ExtResource("20_6c2pa")]
 transform = Transform3D(0.86054647, 0.5093721, 1.8216592e-07, -0.5093721, 0.86054647, -4.9872767e-08, -1.8216545e-07, -4.987288e-08, 1.0000005, 0.5959808, -2.2714505, -8.0280006e-07)
@@ -13869,5 +13871,25 @@ light_color = Color(0.9999978, 0.59836763, 0.4041531, 1)
 light_energy = 1.333
 light_size = 0.59
 
-[node name="Node3D2" parent="." instance=ExtResource("27_y55cv")]
-transform = Transform3D(-0.4, 0, -6.039832e-08, 0, 0.4, 0, 6.039832e-08, 0, -0.4, -43.328506, 2.1891782, 1.9955337)
+[node name="Cabin" parent="POIs" instance=ExtResource("28_2popk")]
+transform = Transform3D(-1.2, 0, -1.8119498e-07, 0, 1.2, 0, 1.8119498e-07, 0, -1.2, 276.50153, 1.968082, 14.78595)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="POIs/Cabin"]
+transform = Transform3D(0.83333325, 0, 0, 0, 0.83333325, 0, 0, 0, 0.83333325, -0.3302002, 2.5422106, 0.9921894)
+light_color = Color(0.65909904, 0.38944128, 2.695322e-06, 1)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="POIs/Cabin"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.264282, 0.2627554, 5.3603354)
+light_color = Color(0.65909904, 0.38944128, 2.695322e-06, 1)
+light_energy = 5.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="POIs/Cabin"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4630127, 2.1131697, -0.2722578)
+light_color = Color(0.65909904, 0.38944128, 2.695322e-06, 1)
+light_energy = 5.0
+
+[node name="rocks" parent="POIs/Cabin" instance=ExtResource("28_vqyuf")]
+transform = Transform3D(-0.8333332, 0, 1.2582981e-07, 0, 0.8333332, 0, -1.2582981e-07, 0, -0.8333332, 59.776825, 0.06702697, -79.76801)
+
+[node name="wendigoAnim" parent="." instance=ExtResource("27_y55cv")]
+transform = Transform3D(-0.35, 0, -5.284853e-08, 0, 0.35, 0, 5.284853e-08, 0, -0.35, -28.089788, 1.8727643, 3.11212)
