@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cv8l1p4ngiekq"]
+[gd_scene format=3 uid="uid://cv8l1p4ngiekq"]
 
 [ext_resource type="Script" uid="uid://qroxhihski8g" path="res://Scripts/main_menu.gd" id="1_28flt"]
 [ext_resource type="Shader" uid="uid://cfuoqbvtey7s6" path="res://Shaders/VHS_Shader.gdshader" id="2_48xlc"]
@@ -16,7 +16,7 @@ shader_parameter/roll_speed = 0.5
 shader_parameter/roll_size = 24.75600117591
 shader_parameter/roll_variation = 1.8
 shader_parameter/distort_intensity = 0.05
-shader_parameter/aberration = 0.015000048212499895
+shader_parameter/aberration = 0.01500004821249989
 shader_parameter/noise_opacity = 0.4
 shader_parameter/noise_speed = 5.0
 shader_parameter/static_noise_intensity = 0.06
@@ -27,16 +27,16 @@ shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.5
 
-[node name="MainMenu" type="Node2D"]
+[node name="MainMenu" type="Node2D" unique_id=747144762]
 script = ExtResource("1_28flt")
 
-[node name="Button Manager" type="Control" parent="."]
+[node name="Button Manager" type="Control" parent="." unique_id=141244114]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Start" type="Button" parent="Button Manager"]
+[node name="Start" type="Button" parent="Button Manager" unique_id=1664936779]
 layout_mode = 0
 offset_left = 327.0
 offset_top = 258.0
@@ -44,7 +44,7 @@ offset_right = 511.0
 offset_bottom = 303.0
 text = "Start"
 
-[node name="Options" type="Button" parent="Button Manager"]
+[node name="Options" type="Button" parent="Button Manager" unique_id=2059614618]
 layout_mode = 0
 offset_left = 326.0
 offset_top = 325.0
@@ -52,7 +52,7 @@ offset_right = 512.0
 offset_bottom = 370.0
 text = "Options"
 
-[node name="Quit" type="Button" parent="Button Manager"]
+[node name="Quit" type="Button" parent="Button Manager" unique_id=83982725]
 layout_mode = 0
 offset_left = 325.0
 offset_top = 385.0
@@ -60,9 +60,9 @@ offset_right = 512.0
 offset_bottom = 427.0
 text = "Quit"
 
-[node name="CRT Shader" type="CanvasLayer" parent="."]
+[node name="CRT Shader" type="CanvasLayer" parent="." unique_id=967260629]
 
-[node name="ColorRect" type="ColorRect" parent="CRT Shader"]
+[node name="ColorRect" type="ColorRect" parent="CRT Shader" unique_id=950160968]
 material = SubResource("ShaderMaterial_48xlc")
 offset_right = 864.0
 offset_bottom = 486.0
