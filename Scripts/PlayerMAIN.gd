@@ -1,14 +1,16 @@
 extends CharacterBody3D
 
 
-const SPEED = 10
+const SPEED = 4.5
 const JUMP_VELOCITY = 3
 const SENSITIVITY = 0.004
+
 
 #fov variables
 const BASE_FOV = 75.0
 const FOV_CHANGE = 1.5
 
+var sprint_speed = 0
 var gravity = 9.81
 var step_timer := 0.0
 var step_playing := false
@@ -56,15 +58,18 @@ func _physics_process(delta):
 		# Add the gravity.
 		if not is_on_floor():
 			velocity.y -= gravity * delta
-
-		# Handle jump.
-		if Input.is_action_just_pressed("Jump") and is_on_floor():
-			velocity.y = JUMP_VELOCITY
+		
+		# Handle Sprint
+		if Input.is_action_just_pressed("Sprint") and is_on_floor():
+			sprint_speed = 2.5
+		if Input.is_action_just_released("Sprint"):
+			sprint_speed = 0
 
 		# Get the input direction and handle the movement/deceleration.
 		# As good practice, you should replace UI actions with custom gameplay actions.
 		var input_dir = Input.get_vector("Right", "Left", "Backward", "Forward")
 		var direction = (head.transform.basis * transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+		var actual_speed = SPEED + sprint_speed
 		if is_on_floor():
 			if is_on_floor() and velocity.length() > 0.1:
 				if not footstep_player.playing:
@@ -74,13 +79,13 @@ func _physics_process(delta):
 					footstep_player.stop()
 			#movment
 			if direction:
-				velocity.x = direction.x * SPEED
-				velocity.z = direction.z * SPEED
+				velocity.x = direction.x * actual_speed
+				velocity.z = direction.z * actual_speed
 			else:
 				velocity.x = 0.0
 				velocity.z = 0.0
 		else:
-			velocity.x = lerp(velocity.x, direction.x * SPEED, delta * 3.0)
-			velocity.z = lerp(velocity.z, direction.z * SPEED, delta * 3.0)
+			velocity.x = lerp(velocity.x, direction.x * actual_speed, delta * 3.0)
+			velocity.z = lerp(velocity.z, direction.z * actual_speed, delta * 3.0)
 
 		move_and_slide()

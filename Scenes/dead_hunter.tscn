@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://baoknis5oni46"]
+[gd_scene load_steps=18 format=4 uid="uid://baoknis5oni46"]
 
 [ext_resource type="Texture2D" uid="uid://vjqepd68jiod" path="res://Survival/Textures/Shelter_tent.png" id="1_eojes"]
 [ext_resource type="Texture2D" uid="uid://cw0pii02gvska" path="res://Survival/Textures/bonfire.png" id="2_wqo6m"]
@@ -88,9 +88,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_4oaet")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_08xmk"]
-size = Vector3(3.274414, 3.3659668, 1.1922607)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8eso7"]
 resource_name = "Backpack"
 vertex_color_use_as_albedo = true
@@ -130,9 +127,6 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_5jcfy")
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_0v6j0"]
-size = Vector3(0.1940918, 0.123046875, 0.23278809)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_65gfx"]
 resource_name = "sleeping_bag"
@@ -192,22 +186,10 @@ transform = Transform3D(15.139151, -1.681392, -6.4416504, 6.4955235, 0.22240533,
 mesh = SubResource("ArrayMesh_mdf6v")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="bonfire"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="bonfire/StaticBody3D"]
-transform = Transform3D(0.018201174, 0.00059381453, 0.008268329, -0.00027551258, 0.019980935, -0.0008284901, -0.008285029, 0.0006400681, 0.018191988, 0.004651429, -0.0042584185, 0.0018128185)
-shape = SubResource("BoxShape3D_08xmk")
-
 [node name="Backpack_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(61.791214, -14.056374, 157.49196, -17.94263, -168.62189, -8.010032, 157.09666, -13.730166, -62.86154, -0.5955652, -0.014292479, 1.456038)
 mesh = SubResource("ArrayMesh_7fh0d")
 skeleton = NodePath("")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Backpack_001"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Backpack_001/StaticBody3D"]
-transform = Transform3D(0.019999798, 1.5133992e-09, 9.313226e-10, 8.1490725e-10, 0.019999992, -2.910383e-10, -4.656613e-09, 2.910383e-09, 0.019999998, 2.1969434e-05, -0.0006250002, 0.0001525851)
-shape = SubResource("BoxShape3D_0v6j0")
 
 [node name="sleeping_bag" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, -18.546217, -5.5272034e-07, -5.5272034e-07, 0, 18.546217, -18.546217, 5.5272034e-07, 0, -1.8527904, 0.12001696, -2.1918647)
