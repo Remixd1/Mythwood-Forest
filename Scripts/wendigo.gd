@@ -3,8 +3,8 @@ extends Node3D
 @onready var anim_player = $AnimationPlayer
 @onready var player = get_tree().get_first_node_in_group("player")
 
-const DETECTION_RANGE = 10.0
-const MOVE_SPEED = 9.0
+const DETECTION_RANGE = 30
+const MOVE_SPEED = 3.0
 
 
 func _ready():

@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=4 uid="uid://bq63hv4rrnhe3"]
+[gd_scene format=4 uid="uid://bq63hv4rrnhe3"]
 
-[ext_resource type="Texture2D" uid="uid://c876trrclqv2d" path="res://Assets/Personajes terror/Personajes terror/Pe12.png" id="1_6iu0l"]
+[ext_resource type="Texture2D" uid="uid://c876trrclqv2d" path="res://Assets/Personajes terror/Pe12.png" id="1_6iu0l"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_acrbe"]
 resource_name = "Material.012"

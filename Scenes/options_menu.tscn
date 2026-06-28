@@ -1,3 +1,71 @@
 [gd_scene format=3 uid="uid://bbdkomtkegw61"]
 
-[node name="OptionsMenu" type="Node2D"]
+[ext_resource type="Script" uid="uid://byuuk1r2nsegg" path="res://Scenes/options_menu.gd" id="1_inh3s"]
+[ext_resource type="Texture2D" uid="uid://b46bimtla8doq" path="res://MenuBG.png" id="2_m6e8v"]
+[ext_resource type="FontFile" uid="uid://d48av060jc48" path="res://HomeVideo-BLG6G.ttf" id="3_tqe32"]
+[ext_resource type="Shader" uid="uid://cfuoqbvtey7s6" path="res://Shaders/VHS_Shader.gdshader" id="4_qfavn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_syw6n"]
+shader = ExtResource("4_qfavn")
+shader_parameter/overlay = true
+shader_parameter/resolution = Vector2(864, 486)
+shader_parameter/brightness = 3.0
+shader_parameter/scanlines_opacity = 0.10000000475
+shader_parameter/scanlines_width = 0.25
+shader_parameter/grille_opacity = 0.30000001425
+shader_parameter/roll = true
+shader_parameter/roll_speed = 0.5
+shader_parameter/roll_size = 24.75600117591
+shader_parameter/roll_variation = 1.8
+shader_parameter/distort_intensity = 0.05
+shader_parameter/aberration = 0.02000004845000003
+shader_parameter/noise_opacity = 0.4
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.06
+shader_parameter/pixelate = false
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 0.0
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.5
+
+[node name="OptionsMenu" type="Node2D" unique_id=931355306]
+script = ExtResource("1_inh3s")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1982042067]
+offset_left = -4.0
+offset_top = -2.0
+offset_right = 867.0
+offset_bottom = 490.0
+texture = ExtResource("2_m6e8v")
+expand_mode = 1
+
+[node name="Button Manager" type="Control" parent="." unique_id=1011170733]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 39.0
+offset_bottom = 39.0
+
+[node name="Back" type="Button" parent="Button Manager" unique_id=471694321]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 429.0
+offset_right = 91.0
+offset_bottom = 476.0
+theme_override_colors/font_hover_color = Color(0.16862746, 0, 0.8117647, 1)
+theme_override_fonts/font = ExtResource("3_tqe32")
+theme_override_font_sizes/font_size = 28
+text = "Back"
+flat = true
+
+[node name="CRT Shader" type="CanvasLayer" parent="." unique_id=1963822073]
+
+[node name="ColorRect" type="ColorRect" parent="CRT Shader" unique_id=1627716673]
+material = SubResource("ShaderMaterial_syw6n")
+offset_right = 864.0
+offset_bottom = 486.0
+mouse_filter = 2
+
+[connection signal="pressed" from="Button Manager/Back" to="." method="_on_back_pressed"]

@@ -1,13 +1,13 @@
-[gd_scene load_steps=48 format=4 uid="uid://ccqf8wjiq5wm0"]
+[gd_scene format=4 uid="uid://ccqf8wjiq5wm0"]
 
-[ext_resource type="Texture2D" uid="uid://b30taq0s24yla" path="res://Assets/Personajes terror/Personajes terror/Pe8.png" id="1_3imdk"]
-[ext_resource type="Texture2D" uid="uid://jhj7t1crrvfw" path="res://Assets/Personajes terror/Personajes terror/Pe6.png" id="2_ctbap"]
-[ext_resource type="Texture2D" uid="uid://dk2s7yikvwwde" path="res://Assets/Personajes terror/Personajes terror/Pe11.png" id="3_u01g2"]
-[ext_resource type="Texture2D" uid="uid://c0pp65khmfd50" path="res://Assets/Personajes terror/Personajes terror/Pe9.png" id="4_u01g2"]
-[ext_resource type="Texture2D" uid="uid://da014e7cs07hj" path="res://Assets/Personajes terror/Personajes terror/Pe10.001.png" id="5_nxef0"]
-[ext_resource type="Texture2D" uid="uid://cxi64nn771oxj" path="res://Assets/Personajes terror/Personajes terror/Pe2.png" id="6_uy5aa"]
-[ext_resource type="Texture2D" uid="uid://bhjvhfpqy0q63" path="res://Assets/Personajes terror/Personajes terror/Pe5.png" id="7_7pq2p"]
-[ext_resource type="Texture2D" uid="uid://x2r6r7ie01dt" path="res://Assets/Personajes terror/Personajes terror/Pe1.png" id="7_cnjlm"]
+[ext_resource type="Texture2D" uid="uid://b30taq0s24yla" path="res://Assets/Personajes terror/Pe8.png" id="1_3imdk"]
+[ext_resource type="Texture2D" uid="uid://jhj7t1crrvfw" path="res://Assets/Personajes terror/Pe6.png" id="2_ctbap"]
+[ext_resource type="Texture2D" uid="uid://dk2s7yikvwwde" path="res://Assets/Personajes terror/Pe11.png" id="3_u01g2"]
+[ext_resource type="Texture2D" uid="uid://c0pp65khmfd50" path="res://Assets/Personajes terror/Pe9.png" id="4_u01g2"]
+[ext_resource type="Texture2D" uid="uid://da014e7cs07hj" path="res://Assets/Personajes terror/Pe10.001.png" id="5_nxef0"]
+[ext_resource type="Texture2D" uid="uid://cxi64nn771oxj" path="res://Assets/Personajes terror/Pe2.png" id="6_uy5aa"]
+[ext_resource type="Texture2D" uid="uid://c6aptbf1706qs" path="res://Assets/Personajes terror/Pe5.png" id="7_7pq2p"]
+[ext_resource type="Texture2D" uid="uid://x2r6r7ie01dt" path="res://Assets/Personajes terror/Pe1.png" id="7_cnjlm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b3tr7"]
 resource_name = "Material.007"
