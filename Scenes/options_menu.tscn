@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bbdkomtkegw61"]
 
-[ext_resource type="Script" uid="uid://byuuk1r2nsegg" path="res://Scenes/options_menu.gd" id="1_inh3s"]
+[ext_resource type="Script" uid="uid://byuuk1r2nsegg" path="res://Scripts/options_menu.gd" id="1_inh3s"]
 [ext_resource type="Texture2D" uid="uid://b46bimtla8doq" path="res://MenuBG.png" id="2_m6e8v"]
 [ext_resource type="FontFile" uid="uid://d48av060jc48" path="res://HomeVideo-BLG6G.ttf" id="3_tqe32"]
 [ext_resource type="Shader" uid="uid://cfuoqbvtey7s6" path="res://Shaders/VHS_Shader.gdshader" id="4_qfavn"]
